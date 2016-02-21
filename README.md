@@ -1,12 +1,12 @@
-AtCoderABC
-==========
+AtCoder
+=======
 
-AtCoderのABC(AtCoder Beginners Contest)に挑戦，もしくは勉強したときのソースコード．
+AtCoderの問題に挑戦，もしくは勉強したときのソースコード．
 
 
 ## 関連リンク
 
-- [AtCoder Problems](http://kenkoooo.com/atcoder/)
+- [AtCoder Problems](http://kenkoooo.com/atcoder/?name=koturn&rivals=&list=0)
 
 
 ## LICENSE
