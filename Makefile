@@ -1,5 +1,5 @@
 MAKE     := make
-DIR_LIST := ABC/ ARC/
+DIR_LIST := $(sort $(wildcard */))
 
 
 .PHONY: all
