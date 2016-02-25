@@ -1,20 +1,20 @@
 ifeq ($(DEBUG),true)
     OPT_CFLAGS   := -O0 -g3 -ftrapv -fstack-protector-all -D_FORTIFY_SOURCE=2
-    OPT_CXXFLAGS := -O0 -g3 -ftrapv -fstack-protector-all -D_FORTIFY_SOURCE=2 -D_GLIBCXX_DEBUG
+    OPT_CXXFLAGS := $(OPT_CFLAGS) -D_GLIBCXX_DEBUG
     OPT_LDLIBS   := -lssp
 else
 ifeq ($(OPT),true)
     OPT_CFLAGS   := -flto -Ofast -march=native -DNDEBUG
-    OPT_CXXFLAGS := -flto -Ofast -march=native -DNDEBUG
+    OPT_CXXFLAGS := $(OPT_CFLAGS)
     OPT_LDFLAGS  := -flto -Ofast -s
 else
 ifeq ($(LTO),true)
     OPT_CFLAGS   := -flto -DNDEBUG
-    OPT_CXXFLAGS := -flto -DNDEBUG
+    OPT_CXXFLAGS := $(OPT_CFLAGS)
     OPT_LDFLAGS  := -flto
 else
     OPT_CFLAGS   := -O3 -DNDEBUG
-    OPT_CXXFLAGS := -O3 -DNDEBUG
+    OPT_CXXFLAGS := $(OPT_CFLAGS)
     OPT_LDFLAGS  := -O3 -s
 endif
 endif
@@ -28,12 +28,12 @@ WARNING_CFLAGS := -Wall -Wextra -Wformat=2 -Wstrict-aliasing=2 \
 WARNING_CXXFLAGS := $(WARNING_CFLAGS) -Weffc++ -Woverloaded-virtual
 
 
-CC       := g++
+CC       := gcc
 CXX      := g++
 CAT      := cat
 ECHO     := echo
-CFLAGS   := -std=gnu++11 -pipe $(WARNING_CFLAGS) $(OPT_CFLAGS)
-CXXFLAGS := -std=gnu++11 -pipe $(WARNING_CXXFLAGS) -Wno-long-long $(OPT_CXXFLAGS)
+CFLAGS   := -std=gnu++11 -pipe -fdiagnostics-color=always $(WARNING_CFLAGS) $(OPT_CFLAGS)
+CXXFLAGS := -std=gnu++11 -pipe -fdiagnostics-color=always $(WARNING_CXXFLAGS) $(OPT_CXXFLAGS)
 LDFLAGS  := -pipe $(OPT_LDFLAGS)
 LDLIBS   := $(OPT_LDLIBS)
 TARGET   := main
