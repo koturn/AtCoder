@@ -1,5 +1,8 @@
 ifeq ($(DEBUG),true)
     OPT_CFLAGS   := -O0 -g3 -ftrapv -fstack-protector-all -D_FORTIFY_SOURCE=2
+ifneq ($(OS),Windows_NT)
+    OPT_CFLAGS   := $(OPT_CFLAGS) -fsanitize=address -fno-omit-frame-pointer
+endif
     OPT_CXXFLAGS := $(OPT_CFLAGS) -D_GLIBCXX_DEBUG
     OPT_LDLIBS   := -lssp
 else
