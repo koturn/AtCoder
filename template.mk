@@ -30,16 +30,16 @@ WARNING_CFLAGS := -Wall -Wextra -Wformat=2 -Wstrict-aliasing=2 \
 WARNING_CXXFLAGS := $(WARNING_CFLAGS) -Weffc++ -Woverloaded-virtual
 
 
-CC           := gcc
-CXX          := g++
+CC           := gcc -std=gnu11
+CXX          := g++ -std=gnu++11
 ECHO         := echo
 CAT          := cat
 MKDIR        := mkdir -p
 CP           := cp
 RM           := rm -f
 CTAGS        := ctags
-CFLAGS       := -pipe -std=gnu11 $(WARNING_CFLAGS) $(OPT_CFLAGS)
-CXXFLAGS     := -pipe -std=gnu++11 $(WARNING_CXXFLAGS) $(OPT_CXXFLAGS)
+CFLAGS       := -pipe $(WARNING_CFLAGS) $(OPT_CFLAGS)
+CXXFLAGS     := -pipe $(WARNING_CXXFLAGS) $(OPT_CXXFLAGS)
 LDFLAGS      := -pipe $(OPT_LDFLAGS)
 LDLIBS       := $(OPT_LDLIBS)
 CTAGSFLAGS   := -R --languages=c,c++
