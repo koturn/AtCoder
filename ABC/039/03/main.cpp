@@ -9,7 +9,7 @@ main()
 {
   const std::string PATTERN = "BWBWBW";
   const std::array<std::string, 12> NOTE_NAMES{"Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "So", "So#", "La", "La#", "Si"};
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   std::string s;

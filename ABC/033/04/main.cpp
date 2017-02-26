@@ -22,7 +22,7 @@ static const std::array<double, 3> DIFF{
 int
 main(void)
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int n;

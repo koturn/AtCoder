@@ -8,7 +8,7 @@ static constexpr std::uint64_t MOD = 1000000007;
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   std::uint64_t a, b, c;

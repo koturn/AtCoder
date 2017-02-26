@@ -9,7 +9,7 @@ static const int N_DIGITS = 6;
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   std::array<int, N_DIGITS> purchasedLot;

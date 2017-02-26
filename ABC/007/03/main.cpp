@@ -108,7 +108,7 @@ static const std::array<int, 4> DX{0, 1, 0, -1};
 
 int main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int r, c, sy, sx, gy, gx;

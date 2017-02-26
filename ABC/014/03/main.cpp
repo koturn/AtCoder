@@ -9,7 +9,7 @@ main()
 {
   static std::array<int, 1000001> imos;
 
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int n;

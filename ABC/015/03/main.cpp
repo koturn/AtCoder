@@ -34,7 +34,7 @@ dfs(std::vector<std::vector<int> >::const_iterator itr, const std::vector<std::v
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int n, k;

@@ -10,7 +10,7 @@ static const std::array<int, 4> TABLE{8, 4, 2, 1};
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int n;

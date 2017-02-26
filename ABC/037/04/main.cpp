@@ -136,7 +136,7 @@ dfs(Array2D<std::int64_t>& memo, const Array2D<std::int64_t>& grid, int y, int x
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int h, w;

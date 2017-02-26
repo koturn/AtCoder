@@ -10,7 +10,7 @@ static const int N = 3;
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   std::array<std::complex<int>, 3> points;

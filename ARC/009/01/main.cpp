@@ -8,7 +8,7 @@ static const int SALES_TAX_RATE_X100 = 105;
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   int n;

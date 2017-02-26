@@ -10,7 +10,7 @@ static const int BOARD_SIZE = 4;
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   std::vector<std::string> board(BOARD_SIZE);

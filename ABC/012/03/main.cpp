@@ -23,7 +23,7 @@ sumKuku()
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   static constexpr int SUM = sumKuku();

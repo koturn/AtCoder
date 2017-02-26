@@ -47,7 +47,7 @@ modinv(IntType a, IntType mod)
 int
 main()
 {
-  std::cin.tie(0);
+  std::cin.tie(nullptr);
   std::ios::sync_with_stdio(false);
 
   std::int64_t h, w, a, b;
